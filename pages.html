@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Top 5 Movies</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+      min-height: 100vh;
+    }
+    header {
+      background: rgba(255,255,255,0.85);
+      padding: 2rem 0 1rem 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      color: #ff6f61;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: transparent;
+      margin-top: 1rem;
+    }
+    nav a {
+      color: #ff6f61;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: 30px;
+      transition: background 0.3s, color 0.3s;
+    }
+    nav a:hover {
+      background: #ff6f61;
+      color: #fff;
+    }
+    .styled-list-section {
+      margin: 3rem 0 0 0;
+      background: rgba(255,255,255,0.92);
+      border-radius: 20px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      padding: 2rem 1.5rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .styled-list-section h2 {
+      color: #ff6f61;
+      margin-top: 0;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    /* Top 5 Movies Section */
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      justify-items: center;
+    }
+    .movie-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff7f0;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(255,111,97,0.08);
+      text-decoration: none;
+      color: #ff6f61;
+      padding: 1rem 0.5rem;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      min-width: 120px;
+    }
+    .movie-card img {
+      width: 90px;
+      height: 135px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.7rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .movie-card span {
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 0.3rem;
+    }
+    .movie-card:hover {
+      background: #ffede6;
+      transform: translateY(-6px) scale(1.04);
+      box-shadow: 0 6px 24px rgba(255,111,97,0.16);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      color: #fff;
+      background: transparent;
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .styled-list-section {
+        padding: 1.2rem 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Top 5 Movies</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">Movies</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <section class="styled-list-section">
+    <h2>Top 5 Movies</h2>
+    <div class="movie-grid">
+      <a class="movie-card" href="https://www.imdb.com/title/tt0111161/" target="_blank">
+        <img src="https://m.media-amazon.com/images/I/51NiGlapXlL._AC_SY445_.jpg" alt="The Shawshank Redemption">
+        <span>The Shawshank Redemption</span>
+      </a>
+      <a class="movie-card" href="https://www.imdb.com/title/tt0068646/" target="_blank">
+        <img src="https://m.media-amazon.com/images/I/51rOnIjLqzL._AC_SY445_.jpg" alt="The Godfather">
+        <span>The Godfather</span>
+      </a>
+      <a class="movie-card" href="https://www.imdb.com/title/tt0468569/" target="_blank">
+        <img src="https://m.media-amazon.com/images/I/51EbJjlLQzL._AC_SY445_.jpg" alt="The Dark Knight">
+        <span>The Dark Knight</span>
+      </a>
+      <a class="movie-card" href="https://www.imdb.com/title/tt0109830/" target="_blank">
+        <img src="https://m.media-amazon.com/images/I/41cQe6A9QGL._AC_SY445_.jpg" alt="Forrest Gump">
+        <span>Forrest Gump</span>
+      </a>
+      <a class="movie-card" href="https://www.imdb.com/title/tt1375666/" target="_blank">
+        <img src="https://m.media-amazon.com/images/I/51v5ZpFyaFL._AC_SY445_.jpg" alt="Inception">
+        <span>Inception</span>
+      </a>
+    </div>
+  </section>
+  <footer>
+    &copy; 2025 Top 5 Movies. All rights reserved.
+  </footer>
