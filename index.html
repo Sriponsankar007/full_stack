@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Creative Responsive Webpage with List</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+      min-height: 100vh;
+    }
+    header {
+      background: rgba(255,255,255,0.85);
+      padding: 2rem 0 1rem 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      color: #ff6f61;
+    }
+    header p {
+      margin: 0.5rem 0 0 0;
+      color: #333;
+      font-size: 1.2rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: transparent;
+      margin-top: 1rem;
+    }
+    nav a {
+      color: #ff6f61;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: 30px;
+      transition: background 0.3s, color 0.3s;
+    }
+    nav a:hover {
+      background: #ff6f61;
+      color: #fff;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem 2rem 1rem;
+      color: #fff;
+      background: linear-gradient(120deg, #ff6f61 0%, #fda085 100%);
+      border-radius: 0 0 40px 40px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    .hero button {
+      background: #fff;
+      color: #ff6f61;
+      border: none;
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: background 0.3s, color 0.3s, transform 0.2s;
+    }
+    .hero button:hover {
+      background: #ff6f61;
+      color: #fff;
+      transform: scale(1.05);
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: rgba(255,255,255,0.95);
+      border-radius: 20px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 80px;
+      height: 80px;
+      background: #fda085;
+      opacity: 0.15;
+      border-radius: 50%;
+      z-index: 0;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #ff6f61;
+      font-size: 1.4rem;
+      z-index: 1;
+      position: relative;
+    }
+    .card p {
+      color: #444;
+      z-index: 1;
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    }
+    .styled-list-section {
+      margin: 3rem 0 0 0;
+      background: rgba(255,255,255,0.92);
+      border-radius: 20px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      padding: 2rem 1.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .styled-list-section h2 {
+      color: #ff6f61;
+      margin-top: 0;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    ul.styled-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0 0 0;
+    }
+    ul.styled-list li {
+      display: flex;
+      align-items: center;
+      background: #fff7f0;
+      margin-bottom: 1rem;
+      padding: 1rem 1.2rem;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      color: #333;
+      box-shadow: 0 2px 8px rgba(255,111,97,0.06);
+      transition: background 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    ul.styled-list li:hover {
+      background: #ffede6;
+      transform: translateX(8px) scale(1.02);
+    }
+    ul.styled-list li .icon {
+      font-size: 1.4rem;
+      margin-right: 1rem;
+      color: #ff6f61;
+      flex-shrink: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      color: #fff;
+      background: transparent;
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .hero {
+        padding: 2rem 1rem 1.5rem 1rem;
+      }
+      .hero h2 {
+        font-size: 1.3rem;
+      }
+      .card-grid {
+        gap: 1rem;
+      }
+      main {
+        padding: 1rem 0.5rem;
+      }
+      .styled-list-section {
+        padding: 1.2rem 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Creative Responsive Webpage</h1>
+    <p>Modern design, smooth animations, and a beautiful list!</p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>Welcome to a new era of web design</h2>
+    <p>Experience creativity and responsiveness in one beautiful package.</p>
+    <button>Get Started</button>
+  </section>
+  <main>
+    <div class="card-grid">
+      <div class="card">
+        <h3>✨ Stunning UI</h3>
+        <p>Enjoy a visually appealing interface with smooth transitions and modern colors.</p>
+      </div>
+      <div class="card">
+        <h3>📱 Mobile First</h3>
+        <p>Looks great on any device, from phones to desktops. Resize to see the magic!</p>
+      </div>
+      <div class="card">
+        <h3>⚡ Fast & Lightweight</h3>
+        <p>Minimal code, fast loading, and easy to customize for your next project.</p>
+      </div>
+    </div>
+    <section class="styled-list-section">
+      <h2>Key Features</h2>
+      <ul class="styled-list">
+        <li><span class="icon">✔️</span> Fully responsive layout for all devices</li>
+        <li><span class="icon">🎨</span> Modern, creative color palette</li>
+        <li><span class="icon">⚡</span> Fast loading and lightweight code</li>
+        <li><span class="icon">🖱️</span> Interactive hover effects</li>
+        <li><span class="icon">🔒</span> Clean and accessible markup</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Creative Responsive Webpage. All rights reserved.
+  </footer>
+</body>
+</html>
