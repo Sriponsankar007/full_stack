@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navigation Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6d365;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      color: #ff6f61;
+      margin-top: 2rem;
+    }
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      background: #ff6f61;
+      padding: 1rem 2.5rem;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: background 0.3s, transform 0.2s;
+      text-align: center;
+    }
+    .nav-links a:hover {
+      background: #fda085;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome! Choose a Page:</h1>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="pages.html">Top 5 Movies</a>
+    <a href="form-table.html">Form & Table</a>
+    <a href="selector-demo.html">CSS Selector Demo</a>
+  </div>
+</body>
+</html>
